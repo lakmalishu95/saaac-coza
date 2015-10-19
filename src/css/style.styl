@@ -1,0 +1,144 @@
+@import 'imports/*'
+@import '../../node_engine/*/ne-imports/style'
+
+// Set the Breakpoints
+bp = 960px
+
+// Set the Colors
+grey = #535d65
+
+// Set the fonts later use // font-family font1
+
+font1 = 'Asap', sans-serif
+
+// The global styles
+
+html
+  font-size 1em
+  color grey
+  font-family font1
+  word-wrap: break-word
+
+body
+  background #eae6e6
+  padding 0
+  margin 0
+  display block
+a
+  color #00B7FF
+
+a:hover
+  color purple
+
+.f1
+    font-family font1
+
+h1
+  margin 0
+  padding 0
+
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Layout Tools  */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+
+// the container is used to center the content on the page. If you dont want the content to be centered dont use a container
+.container
+  center(bp)
+  background green
+  div
+    lost-column: 25/100 0;
+
+// Use rows to wrap around columns and spans
+.row
+  width 100%
+
+
+// Use col inners if you want to add padding, margins and borders to columns and span without breaking the proportions
+
+.col-inner {
+    padding 10px
+    border-radius: 1px
+}
+
+
+// Section to group the content of the page
+
+section
+    padding-top 100px
+    padding-bottom 100px
+
+// Buttons
+
+.btn-pink
+  padding-top 15px
+  padding-bottom 15px
+  padding-left 30px
+  padding-right 30px
+  background pink
+  border-radius: 3px
+  font-size 2em
+  a
+      text-decoration none
+      color white
+  a:hover
+      color purple
+
+.square-list
+  list-style-type: square;
+
+.resposive-image
+  max-width 10%
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Sample code */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+/*
+
+   border-radius: 170px !important
+
+   box-shadow: 5px 5px 5px black
+
+   text-shadow: 2px 2px 4px #000000;
+
+  Collumns, spans, breakpoints and stack() = add them to your classes and id as needed
+
+  span(1/4 4/8)
+
+  col(1/2,cycle: 2)
+
+  +below(bp)
+    stack()
+
+*/
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Header Section */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+
+
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Hero Section */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Footer Section */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
