@@ -7,6 +7,7 @@ var meta = {
     path: "/people",
     title: "People",
     description: "This is People page",
+    css: ["/test.css"],
     nerbArray: [
         {
             nerbName: 'people',

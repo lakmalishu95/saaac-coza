@@ -1,6 +1,6 @@
 'use strict';
 
-import React from 'react';
+var React = require('react');
 var neRender = require('ne-render');
 var appmeta = require ('../node_engine/ne-gulp/appmeta');
 var routes = require ('../node_engine/ne-gulp/routes');

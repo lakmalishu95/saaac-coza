@@ -1,4 +1,4 @@
-import React from 'react';
+var React = require('react');
 
 class Header extends React.Component {
 

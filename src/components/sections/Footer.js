@@ -1,4 +1,4 @@
-import React from 'react';
+var React = require('react');
 
 class Footer extends React.Component {
 
