@@ -5,19 +5,16 @@ class Header extends React.Component {
     render(){
         var self = this;
 
-        var user;
+        var login;
         if (self.props.meta && self.props.meta.claims && self.props.meta.claims.user){
             var text = self.props.meta.claims.displayName;
-            user =
+            login =
                 <ul>
                     <li><a href="/profile">{text}</a></li>
-                    <li><a href="/admin">Admin</a></li>
-                    <li><a href="/admin/users">Users</a></li>
-                    <li><a href="/auth/logout">Logout</a></li>
                 </ul>
         }
         else {
-            user =
+            login =
                 <ul>
                     <li><a href="/login">Login</a></li>
                 </ul>
@@ -25,21 +22,34 @@ class Header extends React.Component {
 
 
         return (
-            <header className="section" id="section-header">
-                <div id="section-header-inner">
-                    <h1>This is the Header</h1>
-                    <div>
+            <header id="section-header">
+                <div id="header-nav-topline">
+
+                </div>
+                <div className="ne-row" id="header-nav">
+                    <div className="ne-row" id="header-nav-logo">
+
+                        <a href="/"><img src="/images/header-nav-logo.png" alt="logo"></img></a>
+
+                    </div>
+                    <div className="ne-row" id="header-nav-links">
                         <ul>
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/about" id="about-link">About</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href="/people">People</a></li>
+                            <li className="ne-ccol-5s header-nav-links-link"><a href="/colleges">colleges</a></li>
+                            <li className="ne-ccol-5s header-nav-links-link"><a href="/faculties">faculties</a></li>
+                            <li className="ne-ccol-5s header-nav-links-link"><a href="/accreditations">accreditations</a></li>
+                            <li className="ne-ccol-5s header-nav-links-link"><a href="/courses">courses</a></li>
+                            <li className="ne-ccol-5s header-nav-links-link"><a href="/about">about us</a></li>
                         </ul>
                     </div>
-                    <div>
-                        {user}
+                    <div className="ne-row" id="header-nav-contact">
+                        <div id="header-nav-contact-link">
+                            <a href="/contact">Contact us</a>
+                        </div>
                     </div>
 
+                </div>
+                <div>
+                    {login}
                 </div>
             </header>
         )

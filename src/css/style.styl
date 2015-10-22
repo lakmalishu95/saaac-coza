@@ -46,34 +46,6 @@ h1
 /* <><><><><><><><><><><><><><><><><> */
 
 
-// the container is used to center the content on the page. If you dont want the content to be centered dont use a container
-.container
-  center(bp)
-  background green
-  div
-    lost-column: 25/100 0;
-
-// Use rows to wrap around columns and spans
-.row
-  width 100%
-
-
-// Use col inners if you want to add padding, margins and borders to columns and span without breaking the proportions
-
-.col-inner {
-    padding 10px
-    border-radius: 1px
-}
-
-
-// Section to group the content of the page
-
-section
-    padding-top 100px
-    padding-bottom 100px
-
-// Buttons
-
 .btn-pink
   padding-top 15px
   padding-bottom 15px
@@ -125,9 +97,105 @@ section
 /* <><><><><><><><><><><><><><><><><> */
 /* <><><><><><><><><><><><><><><><><> */
 
+#header-nav-topline
+  min-height 10px
+  background white
+  zb1()
 
 
 
+#header-nav
+  background red
+
+
+#header-nav-logo
+  min-height 45px
+  lost-column: 1/6 0 0
+  background-image url("/images/header-nav-logo-border-right.png")
+  background-repeat no-repeat
+  background-position top right
+  img
+    margin-top 10px
+    margin-bottom 10px
+    width 100%
+  img:hover
+    opacity .8
+
+
+#header-nav-links
+  min-height 45px
+  lost-column: 4/6 0 0
+  background-image url("/images/header-links-background-tile.png")
+  background-repeat repeat-x
+  background-position top
+
+  ul
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+  li
+    margin-top 10px
+    display: inline-block;
+
+  a
+    margin-left: 5px;
+    margin-right: 5px;
+    border-style: solid;
+    border-color: transparent
+    border-width: 1px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    display: block;
+
+  a:hover
+    border-color white
+    background white
+    color: #000;
+    zb4()
+    transition background 1s
+
+  a:active
+    background blue !important
+    color: #000;
+
+.header-nav-links-link
+  background transparent
+
+
+#header-nav-contact
+  padding-top 20px
+  min-height 45px
+  lost-column: 1/6 0 0
+  background-image url("/images/header-links-background-tile.png")
+  background-repeat repeat-x
+
+#header-nav-contact-link
+  margin-left 20px
+  margin-right 20px
+  padding-top 10px
+  padding-bottom 10px
+  text-align center
+  background yellow
+  border-style: groove
+  border-color: transparent
+  border-width: 1px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  zb3()
+  a
+    display block
+    text-decoration: none
+    color: #000;
+
+#header-nav-contact-link:hover
+  zb5()
+  background white
+  transition background 1s
 
 /* <><><><><><><><><><><><><><><><><> */
 /* <><><><><><><><><><><><><><><><><> */
