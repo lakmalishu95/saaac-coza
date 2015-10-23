@@ -51,7 +51,7 @@ var handler = React.createClass({
                 <Header {...self.props} />
                 <h2 id="main-title">This is the People Handler</h2>
                 {peopleList}
-                <Footer />
+                <Footer {...self.props} />
             </body>
         )
     }

@@ -5,6 +5,7 @@ var Footer = require('../components/sections/Footer');
 var meta = {
     path: "/about",
     title: "About Us",
+    heroImage: "/images/hero-home-back.jpg",
     description: "This is About Us page"
 };
 
@@ -18,7 +19,7 @@ var handler = React.createClass({
                 <h2 id="main-title">This is a the About Handler </h2>
                 <p>Test</p>
                 <p>Path: {self.props.path}</p>
-                <Footer />
+                <Footer {...self.props} />
             </body>
         )
     }

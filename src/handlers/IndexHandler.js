@@ -4,8 +4,8 @@ var Footer = require('../components/sections/Footer');
 
 var meta = {
     path: "/",
-    title: "Home",
-    description: "Home"
+    title: "SAAAC - SA Academy of Applied Competence",
+    description: "Colleges in Pretoria, Queenstown, Durban and East London"
 };
 
 var handler = React.createClass({
@@ -18,7 +18,7 @@ var handler = React.createClass({
                 <Header {...self.props} />
                 <h1 id="main-title">This is the IndexHandler</h1>
                 <h2>{self.props.meta.title}</h2>
-                <Footer />
+                <Footer {...self.props} />
             </body>
         )
     }

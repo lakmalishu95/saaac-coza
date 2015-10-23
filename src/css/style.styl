@@ -4,9 +4,6 @@
 // Set the Breakpoints
 bp = 960px
 
-// Set the Colors
-grey = #535d65
-
 // Set the fonts later use // font-family font1
 
 font1 = 'Asap', sans-serif
@@ -20,7 +17,7 @@ html
   word-wrap: break-word
 
 body
-  background #eae6e6
+  background url("/images/saaac-tile-big.jpg") fixed
   padding 0
   margin 0
   display block
@@ -37,6 +34,18 @@ h1
   margin 0
   padding 0
 
+input {
+  border: inset;
+  border-color: #535d65;
+  color: #808080;
+}
+input:focus {
+  border-color: #ffa500;
+  color: #000;
+}
+
+.input-text-fill
+  width 98%
 
 
 /* <><><><><><><><><><><><><><><><><> */
@@ -97,16 +106,23 @@ h1
 /* <><><><><><><><><><><><><><><><><> */
 /* <><><><><><><><><><><><><><><><><> */
 
-#header-nav-topline
-  min-height 10px
-  background white
-  zb1()
-
-
+#section-header
+  zb3()
 
 #header-nav
   background red
+  zb3()
+  font-size 0.9em
 
+#header-nav:hover
+  zb5()
+  opacity .9
+  transition box-shadow 0.5s, opacity 5s
+
+#header-topline
+  min-height 7px
+  background white
+  zb1()
 
 #header-nav-logo
   min-height 45px
@@ -120,6 +136,15 @@ h1
     width 100%
   img:hover
     opacity .8
+  +below(750px)
+    lost-column: 1/1 0 0
+    lost-align: center
+    min-height 90px
+    background-image none
+  +below(400px)
+    lost-align: center
+    lost-column: 1/1 0 0
+    background-image none
 
 
 #header-nav-links
@@ -128,7 +153,18 @@ h1
   background-image url("/images/header-links-background-tile.png")
   background-repeat repeat-x
   background-position top
-
+  +below(965px)
+    font-size 0.9em
+  +below(820px)
+    font-size 0.8em
+  +below(750px)
+    padding-top 3px
+    lost-column: 1/1 0 0
+  +below(500px)
+    padding-top 5px
+    padding-bottom 10px
+    background-color grey
+    background-image none
   ul
     list-style: none;
     text-align: center;
@@ -163,8 +199,19 @@ h1
     color: #000;
 
 .header-nav-links-link
-  background transparent
-
+  +below(340px)
+    lost-column: 1/1 0 0
+    a
+      background white
+  a
+    background transparent
+    padding-left 10px
+    padding-right 10px
+    margin-left 10px
+    margin-right 10px
+    display block
+    text-decoration: none
+    color: #000;
 
 #header-nav-contact
   padding-top 20px
@@ -172,30 +219,64 @@ h1
   lost-column: 1/6 0 0
   background-image url("/images/header-links-background-tile.png")
   background-repeat repeat-x
-
-#header-nav-contact-link
-  margin-left 20px
-  margin-right 20px
-  padding-top 10px
-  padding-bottom 10px
-  text-align center
-  background yellow
-  border-style: groove
-  border-color: transparent
-  border-width: 1px;
-  border-radius: 5px;
-  text-decoration: none;
-  text-transform: uppercase;
-  zb3()
+  +below(750px)
+    padding-top 0px
+    lost-column: 1/1 0 0
+    background-image none
   a
     display block
     text-decoration: none
     color: #000;
 
+#header-nav-contact-link
+  text-align center
+  a
+    margin-left 20px
+    margin-right 20px
+    padding-top 10px
+    padding-bottom 10px
+    background yellow
+    border-style: groove
+    border-color: transparent
+    border-width: 1px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    zb3()
+
 #header-nav-contact-link:hover
+  a
+    zb5()
+    background white
+    transition background 1s
+
+#header-hero-strip
+  background-position left
+  background-repeat repeat-x
+  border-bottom solid 1px white
+  border-top solid 1px white
+  min-height 188px
+  lost-align center
+  text-align center
+
+#header-hero-strip:hover
+  background-position right
   zb5()
-  background white
-  transition background 1s
+  transition box-shadow 0.5s, background-position 5s
+
+#header-hero-title
+  background grey
+  border-radius 5px
+  opacity 0.8
+  margin 0
+  padding 20px
+  font-size 2em
+  color #fff
+  text-shadow 2px 2px #000;
+  +below(450px)
+    font-size 1.5em
+  +below(300px)
+    font-size 1em
 
 /* <><><><><><><><><><><><><><><><><> */
 /* <><><><><><><><><><><><><><><><><> */
@@ -205,8 +286,75 @@ h1
 
 
 
+
+
 /* <><><><><><><><><><><><><><><><><> */
 /* <><><><><><><><><><><><><><><><><> */
 /* Footer Section */
 /* <><><><><><><><><><><><><><><><><> */
 /* <><><><><><><><><><><><><><><><><> */
+
+#section-footer
+  background grey
+
+.footer-colleges
+  min-height 20px
+  lost-column: 1/4 0 0
+
+.footer-faculties
+  min-height 20px
+  lost-column: 1/4 0 0
+
+.footer-contact
+  min-height 20px
+  lost-column: 2/4 0 0
+
+.footer-heading
+  text-transform uppercase
+  margin-left 30px
+  color #fff
+
+.footer-contact-input
+  border-radius 15px
+  line-height 1.8em
+  padding-left 10px
+  padding-right 10px
+  border: thin !important
+  float right
+
+.footer-contact-input:focus
+  background yellow
+
+.footer-contact-input:hover
+  opacity 0.9
+  zb5()
+  transition opacity  0.5s, box-shadow 0.25s
+
+.footer-contact-submit
+  border: thin !important
+  background yellow
+  margin-top 20px
+  border-radius 15px
+  line-height 2.5em
+  width: 40%;
+  float right
+  color black
+
+.footer-contact-submit:hover
+  background green
+  color #fff
+  zb5()
+  transition background 0.5s, box-shadow 0.25s
+
+.footer-contact-inner
+  padding 40px
+
+.footer-contact-label
+  color white
+  float right
+  padding-right 30px
+
+.footer-copyright
+  color #fff
+  min-height 100px
+  lost-align: center
