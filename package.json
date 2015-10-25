@@ -11,7 +11,7 @@
     "express": "^4.13.3",
     "lodash": "^3.10.1",
     "mongoose": "^4.1.12",
-    "ne-admin": "^1.4.4",
+    "ne-admin": "^1.4.5",
     "ne-auth": "^1.4.6",
     "ne-auto": "^1.3.2",
     "ne-auto-off": "^1.1.0",
