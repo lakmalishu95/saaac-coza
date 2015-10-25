@@ -62,7 +62,7 @@ class Footer extends React.Component {
                             element(
                                 "div",{className: "footer-contact-inner"},
                                 element(
-                                    "form",{action: "/emails/sendgrid/inbound", type: ""},
+                                    "form",{action: "/emails/sendgrid/inbound", method: "post"},
                                     element(
                                         "label",{className: "footer-contact-label"},
                                         "name"
@@ -84,7 +84,7 @@ class Footer extends React.Component {
                                         "br",{}
                                     ),
                                     element(
-                                        "input",{type: "text", name: "email", className: "input-text-fill footer-contact-input"}
+                                        "input",{type: "text", name: "from", className: "input-text-fill footer-contact-input"}
                                     ),
                                     element(
                                         "br",{}

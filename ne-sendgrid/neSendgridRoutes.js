@@ -1,5 +1,5 @@
 var express = require('express');
-var neSendgrid = require('../ne-sendgrid');
+var neSendgrid = require('ne-sendgrid');
 
 var router = express.Router();
 
@@ -58,10 +58,12 @@ var neSendgridContactFormRoute = function (server){
 
         neSendgrid.sendText(emailObject);
 
+        res.redirect('/');
+
         /*
         neSendgrid.sendText({
-            to: "bernard@yebolocal.com",
-            from: "bernard@yebolocal.com",
+            to: "name@mail.com",
+            from: "name@mail.com",
             subject: "This is the subject 2",
             body: "This is the body 2"s
         });

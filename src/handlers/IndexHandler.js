@@ -16,8 +16,6 @@ var handler = React.createClass({
         return (
             <body>
                 <Header {...self.props} />
-                <h1 id="main-title">This is the IndexHandler</h1>
-                <h2>{self.props.meta.title}</h2>
                 <Footer {...self.props} />
             </body>
         )

@@ -1,4 +1,5 @@
 var React = require('react');
+var element = React.createElement;
 var Header = require('../components/sections/Header');
 var Footer = require('../components/sections/Footer');
 
@@ -13,11 +14,30 @@ var handler = React.createClass({
 
     render: function() {
         var self = this;
+
+        ///////////
+        var message;
+        if(self.props.meta.query && self.props.meta.query.message){
+            message = element(
+                "div",{className: "contact-message ne-row"},
+                element(
+                    "p",{},
+                    self.props.meta.query.message
+                )
+            )
+        }
+        else{
+            message = element(
+                "div",{}
+            )
+        }
+
+        ///////////
+
         return (
             <body>
                 <Header {...self.props}/>
-                <h2 id="main-title">This is the Contact Handler</h2>
-                <p>{self.props.meta.title}</p>
+                {message}
                 <Footer {...self.props} />
             </body>
 

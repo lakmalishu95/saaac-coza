@@ -21,6 +21,10 @@ body
   padding 0
   margin 0
   display block
+
+textarea
+  width:100%;
+  color #000
 a
   color #00B7FF
 
@@ -47,6 +51,23 @@ input:focus {
 .input-text-fill
   width 98%
 
+
+.dataListItem
+  background #fff
+  border-radius 10px
+  lost-column: 1/3 3 10px
+  text-align center
+  margin-top 20px
+  margin-bottom 20px
+  zb2()
+
+.dataListItem:hover
+  transition box-shadow 0.5s
+  zb5()
+
+.dataListItemInner
+  padding 20px
+  min-height 80px
 
 /* <><><><><><><><><><><><><><><><><> */
 /* <><><><><><><><><><><><><><><><><> */
@@ -296,18 +317,33 @@ input:focus {
 
 #section-footer
   background grey
+  padding-top 50px
 
 .footer-colleges
   min-height 20px
   lost-column: 1/4 0 0
+  +below(777px)
+    lost-column: 1/2 0 0
+  +below(480px)
+    margin-top 70px
+    lost-column: 1/1 0 0
 
 .footer-faculties
   min-height 20px
   lost-column: 1/4 0 0
+  +below(777px)
+    lost-column: 1/2 0 0
+  +below(480px)
+    margin-top 70px
+    lost-column: 1/1 0 0
 
 .footer-contact
   min-height 20px
   lost-column: 2/4 0 0
+  +below(777px)
+    margin-top 70px
+    lost-column: 1/1 0 0
+
 
 .footer-heading
   text-transform uppercase
@@ -358,3 +394,22 @@ input:focus {
   color #fff
   min-height 100px
   lost-align: center
+
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Contact Handler */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+
+.contact-message
+  margin 40px
+  border-radius 5px
+  text-align center
+  background yellow
+  min-height 70px
+  zb3()
+  p
+    font-size 2em

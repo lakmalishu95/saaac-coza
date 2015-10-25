@@ -16,9 +16,6 @@ var handler = React.createClass({
         return (
             <body>
                 <Header {...self.props} />
-                <h2 id="main-title">This is a the About Handler </h2>
-                <p>Test</p>
-                <p>Path: {self.props.path}</p>
                 <Footer {...self.props} />
             </body>
         )
