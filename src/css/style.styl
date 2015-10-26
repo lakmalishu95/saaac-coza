@@ -25,8 +25,12 @@ body
 textarea
   width:100%;
   color #000
+
 a
   color #00B7FF
+
+select
+  color grey
 
 a:hover
   color purple
@@ -413,3 +417,70 @@ input:focus {
   zb3()
   p
     font-size 2em
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Courses Handler */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+.courses-list-item
+  margin-top:  30px
+  margin-bottom:  30px
+  padding-bottom:  20px
+  padding-top:  20px
+  lost-column 1/2 2 30px
+  background rgba(#fff, 0.8);
+  border-radius 10px
+  zb3()
+  +below(645px)
+    lost-column 1/1 1 30px
+
+.courses-list-item:hover
+  background grey
+  color #fff
+  transition background 2s, box-shadow 0.5s, color 1.5s
+  zb5()
+
+.courses-list-item-title
+  text-transform uppercase
+  text-align center
+  font-size 2em
+
+.courses-list-item-field
+  padding-left: 20px
+  padding-right:  20px
+  padding-bottom:  10px
+  padding-top:  10px
+
+.courses-list-item-field:hover
+  background red
+  transition background 0.5s, color 0.5s, box-shadow 0.3s
+  zb3()
+
+.courses-list-item-field-title
+  font-size 1.2em
+  font-weight bold
+
+.courses-list-item-apply
+  lost-align: center
+  min-height 60px
+  text-align center
+  a
+    text-decoration none
+    color #000
+    display block
+    line-height 40px
+    background yellow
+    border-radius 10px
+    width 80%
+    margin 10px auto
+    zb2()
+    span
+      margin-left 10px
+  a:hover
+    zb5()
+    background green
+    color #fff
+    transition box-shadow 0.25s, background 0.5s

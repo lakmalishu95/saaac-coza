@@ -1,6 +1,18 @@
+
+
+
+var tt = new Date().valueOf();
+
+console.log(tt);
+
+//console.log(mail);
+
+
+/*
+
 var React = require('react');
 var element = React.createElement;
-var neSendgrid = require('./src/ne-sendgrid');
+//var neSendgrid = require('./src/ne-sendgrid');
 
 var strr = Math.random().toString().substring(3,8);
 console.log(strr);
@@ -12,9 +24,8 @@ var mail = neSendgrid.sendText({
     body: "This is the body 2"
 });
 
-//console.log(mail);
 
-/*
+
 var qq2 = element(
     "div", {className: "something"},
     element(

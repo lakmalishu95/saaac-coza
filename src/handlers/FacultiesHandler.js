@@ -26,6 +26,7 @@ var meta = {
 var handler = React.createClass({
 
     render: function() {
+        var self = this;
         return (
             <body>
             <Header {...self.props} />
