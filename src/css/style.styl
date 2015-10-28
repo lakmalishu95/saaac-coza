@@ -297,9 +297,11 @@ h1
     margin-right 0
 
 .home-section-main-facebook
+  text-align center
   lost-column 1/3 0
   +below(820px)
     lost-column:1/1 0
+    margin 40px auto 10px auto
 
 
 
@@ -507,10 +509,13 @@ h1
 /* <><><><><><><><><><><><><><><><><> */
 
 #section-accstrip
-  background #fff url("/images/accstrip.jpg") repeat-x center
+  background #fff url("/images/accstrip.jpg") repeat-x right
   padding-top 23px
   padding-bottom 23px
 
+#section-accstrip:hover
+  transition background-position 20s
+  background-position left
 
 /* <><><><><><><><><><><><><><><><><> */
 /* <><><><><><><><><><><><><><><><><> */
