@@ -1,6 +1,7 @@
 var React = require('react');
 var Header = require('../components/sections/Header');
 var Footer = require('../components/sections/Footer');
+var Accreditations = require('../components/sections/Accreditations');
 var element = React.createElement;
 
 var meta = {
@@ -43,8 +44,15 @@ var handler = React.createClass({
                     element(
                         "div",{className: "dataListItemInner"},
                         element(
-                            "p",{},
+                            "img",{src: accreditation.logoLink, alt:accreditation.title + " logo"}
+                        ),
+                        element(
+                            "h4",{},
                             accreditation.title
+                        ),
+                        element(
+                            "p",{},
+                            accreditation.description
                         )
                     )
                 )
@@ -53,9 +61,10 @@ var handler = React.createClass({
         return (
             <body>
                 <Header {...self.props} />
-                <section className="ne-row-960">
+                <section className="ne-row-960" id="accreditations-list">
                     {accreditationsList}
                 </section>
+                <Accreditations {...self.props} />
                 <Footer {...self.props} />
             </body>
         )

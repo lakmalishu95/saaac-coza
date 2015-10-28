@@ -3,7 +3,10 @@ var Schema = mongoose.Schema;
 var neData = require('ne-data');
 
 var modelSchema = new Schema({
-    title:{type: String, required: true},
+    title:{type: String},
+    description:{type: String},
+    logoLink:{type: String},
+    image:{type: String},
     createdAt:{type: String, required: true, default: new Date()}
 });
 
@@ -18,9 +21,21 @@ var dataRef = {
     "tags": [],
     "fields": [
         {
-            name: "p1",
             label: "Title",
             data: "title"
+        },
+        {
+            label: "Description",
+            data: "description",
+            editType: "textarea"
+        },
+        {
+            label: "Logo Link",
+            data: "logoLink"
+        },
+        {
+            label: "",
+            data: "Image"
         }
     ]
 };

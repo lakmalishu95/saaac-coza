@@ -2,6 +2,7 @@ var React = require('react');
 var element = React.createElement;
 var Header = require('../components/sections/Header');
 var Footer = require('../components/sections/Footer');
+var AccStrip = require('../components/sections/AccStrip');
 
 var meta = {
 
@@ -130,7 +131,7 @@ var handler = React.createClass({
                     element(
                         "div", {className: "courses-list-item-apply"},
                         element(
-                            "a",{href:"/apply"},
+                            "a",{href:"/applications?course=" + course.title},
                             element(
                                 "i",{className: "fa fa-hand-o-right"}
                             ),
@@ -148,6 +149,7 @@ var handler = React.createClass({
         return (
             <body>
             <Header {...self.props} />
+            <AccStrip {...self.props} />
             <section className="ne-row-960">
                 {coursesList}
             </section>

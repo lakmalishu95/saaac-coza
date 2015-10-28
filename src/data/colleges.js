@@ -4,6 +4,9 @@ var neData = require('ne-data');
 
 var modelSchema = new Schema({
     title:{type: String, required: true},
+    phone:{type: String, required: true},
+    email:{type: String, required: true},
+    address:{type: String, required: true},
     createdAt:{type: String, required: true, default: new Date()}
 });
 
@@ -18,9 +21,21 @@ var dataRef = {
     "tags": [],
     "fields": [
         {
-            name: "p1",
             label: "Title",
             data: "title"
+        },
+        {
+            label: "Phone",
+            data: "phone"
+        },
+        {
+            label: "Email",
+            data: "email"
+        },
+        {
+            label: "Address",
+            data: "address",
+            editType: "textarea"
         }
     ]
 };
@@ -35,7 +50,7 @@ var Model = mongoose.model(
 
 var routes = function (router, passport, strategyName){
 
-    var permissionsArray = ['reader', 'admin'];
+    var permissionsArray = [ 'admin'];
 
     neData.get(router, Model);
     neData.putWithPermissions(router, Model, permissionsArray);

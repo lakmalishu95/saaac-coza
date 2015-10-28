@@ -1,6 +1,7 @@
 var React = require('react');
 var Header = require('../components/sections/Header');
 var Footer = require('../components/sections/Footer');
+var AccStrip = require('../components/sections/AccStrip');
 
 var meta = {
 
@@ -30,6 +31,7 @@ var handler = React.createClass({
         return (
             <body>
             <Header {...self.props} />
+            <AccStrip {...self.props} />
             <p>ddd</p>
             <Footer {...self.props} />
             </body>

@@ -2,6 +2,7 @@ var React = require('react');
 var element = React.createElement;
 var Header = require('../components/sections/Header');
 var Footer = require('../components/sections/Footer');
+var AccStrip = require('../components/sections/AccStrip');
 
 var meta = {
     path: "/contact",
@@ -19,9 +20,9 @@ var handler = React.createClass({
         var message;
         if(self.props.meta.query && self.props.meta.query.message){
             message = element(
-                "div",{className: "contact-message ne-row"},
+                "div",{className: "info-message ne-row"},
                 element(
-                    "p",{},
+                    "a",{href: "/contact"},
                     self.props.meta.query.message
                 )
             )
@@ -37,6 +38,7 @@ var handler = React.createClass({
         return (
             <body>
                 <Header {...self.props}/>
+                <AccStrip {...self.props} />
                 {message}
                 <Footer {...self.props} />
             </body>

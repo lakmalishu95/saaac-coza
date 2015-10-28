@@ -26,9 +26,19 @@ class Header extends React.Component {
             )
         }
 
+        var userStatus;
+        if(self.props.meta && self.props.meta.claims && self.props.meta.claims.user ){
+            userStatus = <a href="/auth/logout" className="topline-user-status"> Protect your privacy: Remember to LOGOUT by clicking here</a>
+        }
+        else{
+            userStatus = <a href="/login" className="topline-user-status"></a>
+        }
+
+
         return (
             <header id="section-header">
                 <div id="header-topline">
+                    {userStatus}
                 </div>
                 <div className="ne-row" id="header-nav">
                     <div className="f" id="header-nav-logo">
@@ -39,15 +49,16 @@ class Header extends React.Component {
                     <div className="f" id="header-nav-links">
                         <ul>
                             <li className="header-nav-links-link"><a href="/colleges">colleges</a></li>
-                            <li className="header-nav-links-link"><a href="/faculties">faculties</a></li>
+
                             <li className="header-nav-links-link"><a href="/accreditations">accreditations</a></li>
                             <li className="header-nav-links-link"><a href="/courses">courses</a></li>
                             <li className="header-nav-links-link"><a href="/about">about us</a></li>
+                            <li className="header-nav-links-link"><a href="/contact">contact us</a></li>
                         </ul>
                     </div>
                     <div className="f" id="header-nav-contact">
                         <div id="header-nav-contact-link">
-                            <a href="/contact">Contact us</a>
+                            <a href="/applications">Apply Online</a>
                         </div>
                     </div>
                 </div>
@@ -60,3 +71,5 @@ class Header extends React.Component {
 }
 
 export default Header;
+
+// todo add back <li className="header-nav-links-link"><a href="/faculties">faculties</a></li>

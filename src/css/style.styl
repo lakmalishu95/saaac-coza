@@ -22,15 +22,68 @@ body
   margin 0
   display block
 
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Form Defaults  */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+input
+  border: inset
+  margin-left 1%
+  margin-right 2%
+  border-radius 5px
+  width 95%
+  border-color #535d65
+  padding-left 1%
+  padding-right 1%
+  color grey
+
+input:focus
+  border inset
+  border-color black
+  color black
+
 textarea
-  width:100%;
-  color #000
+  padding-left 1%
+  padding-right 1%
+  margin-left 1%
+  margin-right 2%
+  border-radius 5px
+  width 95%
+  color grey
+
+textarea:focus
+  border inset
+  border-color black
+  color black
+
+select
+  margin-left 1%
+  margin-right 2%
+  border-radius 5px
+  width 97%
+  text-align center
+  color grey
+
+select:focus
+  border inset
+  border-color black
+  color black
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/*
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
 
 a
   color #00B7FF
 
-select
-  color grey
+img
+  width 100%
 
 a:hover
   color purple
@@ -42,19 +95,8 @@ h1
   margin 0
   padding 0
 
-input {
-  border: inset;
-  border-color: #535d65;
-  color: #808080;
-}
-input:focus {
-  border-color: #ffa500;
-  color: #000;
-}
-
 .input-text-fill
   width 98%
-
 
 .dataListItem
   background #fff
@@ -145,9 +187,24 @@ input:focus {
   transition box-shadow 0.5s, opacity 5s
 
 #header-topline
-  min-height 7px
-  background white
+  background #fff
   zb1()
+  a
+    padding 10px
+    text-align center
+    display block
+    min-height 7px
+    font-size 1.4em
+    color grey
+    text-decoration none
+
+#header-topline:hover
+  transition background 0.5s,box-shadow 0.5s
+  background yellow
+  zb5()
+  a
+    color grey
+
 
 #header-nav-logo
   min-height 45px
@@ -276,6 +333,7 @@ input:focus {
     transition background 1s
 
 #header-hero-strip
+  zb2()
   background-position left
   background-repeat repeat-x
   border-bottom solid 1px white
@@ -408,15 +466,19 @@ input:focus {
 /* <><><><><><><><><><><><><><><><><> */
 
 
-.contact-message
+.info-message
   margin 40px
-  border-radius 5px
   text-align center
-  background yellow
-  min-height 70px
   zb3()
-  p
+  a
+    border-radius 5px
+    color: grey
+    text-decoration none
+    background yellow
     font-size 2em
+    display block
+    width 100%
+    line-height 70px
 
 
 /* <><><><><><><><><><><><><><><><><> */
@@ -484,3 +546,124 @@ input:focus {
     background green
     color #fff
     transition box-shadow 0.25s, background 0.5s
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* accreditations */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+#section-accreditations
+  background #fff
+  padding-top 70px
+  padding-left 10%
+  padding-right 10%
+  +below(776px)
+    padding-left 1%
+    padding-right 1%
+  +below(500px)
+    padding-top 40px
+
+#accreditations-list
+  margin-top 70px
+  margin-bottom 70px
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* acc Strip */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+#section-accstrip
+  background #fff url("/images/accstrip.jpg") repeat-x center
+  padding-top 23px
+  padding-bottom 23px
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Prof Course Link */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+#section-profcourselink
+  padding-top 70px
+  padding-bottom 70px
+  background red url("/images/tile-mountain.png") center
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* Colleges Handler */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+.colleges-list-item
+  margin-top:  30px
+  margin-bottom:  30px
+  padding-bottom:  20px
+  padding-top:  20px
+  lost-column 1/2 2 30px
+  background rgba(#fff, 0.8);
+  border-radius 10px
+  zb3()
+  +below(645px)
+    lost-column 1/1 1 30px
+
+.colleges-list-item:hover
+  background grey
+  color #fff
+  transition background 2s, box-shadow 0.5s, color 1.5s
+  zb5()
+
+.colleges-list-item-inner
+  padding-left 30px
+  padding-right 30px
+
+
+
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+/* ne-data */
+/* <><><><><><><><><><><><><><><><><> */
+/* <><><><><><><><><><><><><><><><><> */
+
+.ne-data-field-applications
+  font-size 1.2em
+  margin-top 20px
+  margin-bottom 20px
+  padding-top 20px
+  padding-bottom 20px
+  padding-left 20px
+  padding-right 20px
+  background grey
+  border-radius 10px
+  color #fff
+  zb3()
+
+.ne-data-field-applications:hover
+  transition box-shadow 0.5s, background 0.5s
+  background red
+  zb5()
+
+.applications-section
+  margin-top 50px
+  margin-bottom  50px
+
+.application-save-btn
+  zb3()
+  text-align center
+  padding-left 30px
+  padding-right 30px
+  padding-top 20px
+  padding-bottom 20px
+  margin-top 30px
+  margin-bottom 30px
+  background yellow
+  font-size 1.8em
+
+.application-save-btn:hover
+  zb5()
+  transition background 0.5s, box-shadow 0.5s
+  background green
