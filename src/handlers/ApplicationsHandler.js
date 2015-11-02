@@ -101,7 +101,7 @@ var handler = React.createClass({
             else{
 
                 applicationForCurrentUser = element(
-                    "form", {action: "/login", method: "get"},
+                    "form", {action: "/custom-login", method: "get"},
                     element(
                         'label', {},
                         "You need to login before you can apply online"
@@ -149,7 +149,7 @@ var handler = React.createClass({
         else {
 
             applicationForCurrentUser = element(
-                "form", {action: "/login", method: "get"},
+                "form", {action: "/custom-login", method: "get"},
                 element(
                     'label', {},
                     "You need to login before you can apply online"

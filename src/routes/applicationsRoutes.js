@@ -1,5 +1,6 @@
 var express = require('express');
 var Model = require('../data/applications').model;
+var neSendgrid = require('ne-sendgrid');
 
 var router = express.Router();
 
@@ -74,6 +75,30 @@ var neLocalStrategyRoutes = function (server){
         newDoc.save(function (err, newDoc){
             if (err) return console.error(err);
 
+            var emailSubject;
+            if(req && req.claims && req.claims.user){
+
+                emailSubject = "New Application: " + req.claims.displayName
+            }
+            else{
+                emailSubject = "New Application"
+            }
+            var emailBody = "<h2>Info: </h2><p>The applicant has started an application, but not yet completed it.</p>";
+
+            for (var prop in obj) {
+                var newline = "<p>" + prop + " = " + obj[prop] + "</p>" ;
+                emailBody = emailBody.concat(newline);
+            }
+
+            // send notification that application had been updated
+            neSendgrid.sendHTML({
+                to: "info@saaac.co.za",
+                from: "info@saaac.co.za",
+                subject: emailSubject,
+                body: emailBody,
+                save: true
+            });
+
             console.log('');
             console.log('');
             console.log('applicationRoutes: saved');
@@ -120,6 +145,36 @@ var neLocalStrategyRoutes = function (server){
                 config
             )
                 .exec(function (err, doc){
+
+                    var emailSubject;
+                    if(json.student && json.student.name){
+                        if(json.student && json.student.surname){
+                            emailSubject = json.student.name + " " + json.student.surname + " updated"
+                        }
+                        else{
+                            emailSubject = json.student.name  + " updated"
+                        }
+                    }
+                    else{
+                        emailSubject = "Application updated"
+                    }
+
+                    var emailBody = "<h2>Updated Info: </h2>";
+
+                    for (var prop in json) {
+                        var newline = "<p>" + prop + " = " + json[prop] + "</p>" ;
+                        emailBody = emailBody.concat(newline);
+                    }
+
+                    // send notification that application had been updated
+                    neSendgrid.sendHTML({
+                        to: "info@saaac.co.za",
+                        from: "info@saaac.co.za",
+                        subject: emailSubject,
+                        body: emailBody,
+                        save: true
+                    });
+
                     res.redirect('/applications?message=Application Updated')
                 });
 

@@ -9,7 +9,7 @@ var meta = {
     path: "/courses",
     title: "Courses",
     description: "SAAAC offers a wide variety of accredited courses",
-    css: ["http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"],
+    css: ["/ne-style/ne-css/neStyleFontAwesome.css"],
     nerbArray: [
         {
             nerbName: 'courses',

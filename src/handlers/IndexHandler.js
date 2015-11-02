@@ -28,6 +28,21 @@ var handler = React.createClass({
                         <div className="home-section-main-video-inner">
                             <iframe width="100%" height="360px" src="https://www.youtube.com/embed/tYe0z4KZ3bs" frameBorder="0" allowFullScreen></iframe>
                         </div>
+                        <div className="prospectus-download-heading">
+                            <h2>Download Prospectus</h2>
+                        </div>
+                        <div className="prospectus-download-row">
+                            <div className="prospectus-download">
+                                <a href="/docs/SAAAC-prospectus-2016.pdf" target="_blank">SAAAC</a>
+                            </div>
+                            <div className="prospectus-download">
+                                <a href="/docs/ICB-prospectus-2016.pdf" target="_blank"> ICB</a>
+                            </div>
+                            <div className="prospectus-download">
+                                <a href="/docs/ITH-prospectus-2016.pdf" target="_blank"> ITH </a>
+                            </div>
+                        </div>
+
                     </div>
                     <div className="home-section-main-facebook">
                         <div className="fb-page" data-href="https://www.facebook.com/saaac.co.za"

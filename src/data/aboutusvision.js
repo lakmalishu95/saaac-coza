@@ -3,17 +3,14 @@ var Schema = mongoose.Schema;
 var neData = require('ne-data');
 
 var modelSchema = new Schema({
-    path:{type: String, required: true},
-    title:{type: String, required: true},
-    description:{type: String, required: true},
+    visionItem:{type: String},
     createdAt:{type: String, required: true, default: new Date()}
-
 });
 
 var dataRef = {
-    "name": "page",
-    "slug": "/admin/page",
-    "apiSlug": "/data/page",
+    "name": "aboutusvision",
+    "slug": "/admin/aboutusvision",
+    "apiSlug": "/data/aboutusvision",
     "interfaceType": "default",
     "cycleByDefault": false,
     "batchSize": 10,
@@ -21,31 +18,23 @@ var dataRef = {
     "tags": [],
     "fields": [
         {
-            name: "p1",
-            data: "path"
-        },
-        {
-            name: "p2",
-            data: "title"
-        },
-        {
-            name: "p3",
-            data: "description"
+            label: "visionItem",
+            data: "visionItem",
+            editType: "textarea"
         }
     ]
 };
 
-
 var Model = mongoose.model(
-    'page',
+    'aboutusvision',
     modelSchema,
-    'page'
+    'aboutusvision'
 );
 
 
 var routes = function (router, passport, strategyName){
 
-    var permissionsArray = ['reader'];
+    var permissionsArray = ['admin'];
 
     neData.get(router, Model);
     neData.putWithPermissions(router, Model, permissionsArray);
