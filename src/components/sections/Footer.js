@@ -43,14 +43,14 @@ class Footer extends React.Component {
                             "div",{className: "footer-colleges"},
                             element(
                                 "h4",{className: "footer-heading"},
-                                "Colleges"
+                                "."
                             )
                         ),
                         element(
                             "div",{className: "footer-faculties"},
                             element(
                                 "h4",{className: "footer-heading"},
-                                "Faculties"
+                                "."
                             )
                         ),
                         element(
