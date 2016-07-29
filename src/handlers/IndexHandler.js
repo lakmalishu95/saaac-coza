@@ -42,6 +42,14 @@ var handler = React.createClass({
                                 <a href="/docs/ITH-prospectus-2016.pdf" target="_blank"> ITH </a>
                             </div>
                         </div>
+                        <div className="prospectus-download-heading">
+                            <h2>Download Fee Structure</h2>
+                        </div>
+                        <div className="prospectus-download-row">
+                            <div className="prospectus-download">
+                                <a href="/docs/prices.pdf" target="_blank"> Fee Structure</a>
+                            </div>
+                        </div>
 
                     </div>
                     <div className="home-section-main-facebook">
