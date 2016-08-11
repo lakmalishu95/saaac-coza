@@ -43,7 +43,45 @@ class Footer extends React.Component {
                             "div",{className: "footer-colleges"},
                             element(
                                 "h4",{className: "footer-heading"},
-                                "."
+                                "Colleges"
+                            ),
+                            element(
+                                "ul",{},
+                                element(
+                                    "li",{className: "footer-list"},
+                                    element(
+                                        "a",{href:"/#"},
+                                        "Pretoria Campus"
+                                    )
+                                ),
+                                element(
+                                    "li",{className: "footer-list"},
+                                    element(
+                                        "a",{href:"/#"},
+                                        "Queenstown Campus"
+                                    )
+                                ),
+                                element(
+                                    "li",{className: "footer-list"},
+                                    element(
+                                        "a",{href:"/#"},
+                                        "Durban Campus"
+                                    )
+                                ),
+                                element(
+                                    "li",{className: "footer-list"},
+                                    element(
+                                        "a",{href:"/#"},
+                                        "East London Campus"
+                                    )
+                                ),
+                                element(
+                                    "li",{className: "footer-list"},
+                                    element(
+                                        "a",{href:"/#"},
+                                        "Sterkstroom Campus"
+                                    )
+                                )
                             )
                         ),
                         element(

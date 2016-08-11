@@ -7,7 +7,7 @@ class section extends React.Component {
 
         return (
             <section id="section-profcourselink" className="ne-row">
-                <a href="/courses"><img src="/images/profcourselink.png" alt="Link to courses"/></a>
+                <a href="/courses"><img src="/images/profcourselink-3.png" alt="Link to courses"/></a>
             </section>
         )
     }
