@@ -33,7 +33,7 @@ var handler = React.createClass({
                         </div>
                         <div className="prospectus-download-row">
                             <div className="prospectus-download">
-                                <a href="/docs/SAAAC-prospectus-2016.pdf" target="_blank">SAAAC</a>
+                                <a href="/docs/SAAAC-prospectus-2016-2017.pdf" target="_blank">SAAAC</a>
                             </div>
                             <div className="prospectus-download">
                                 <a href="/docs/ICB-prospectus-2016.pdf" target="_blank"> ICB</a>
