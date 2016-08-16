@@ -43,6 +43,8 @@ var dataRef = {
                 "Faculty of Health & Social Care",
                 "Faculty of Travel & Tourism",
                 "Faculty of Transport & Logistics",
+                "Faculty of Education",
+                "Faculty of Law",
                 "Short Courses"
             ],
             templateRef: "string5"
