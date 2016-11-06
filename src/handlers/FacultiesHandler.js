@@ -8,19 +8,6 @@ var meta = {
     path: "/faculties",
     title: "Faculties",
     description: "Faculties as SAAAC",
-    nerbArray: [
-        {
-            nerbName: 'courses',
-            pathFunction: function (meta) {
-                if (meta.params._id){
-                    path = process.env.ROOTURL + "/data/courses" + "/" + meta.params._id +"?token="+ meta.token;
-                }else {
-                    var path = process.env.ROOTURL + "/data/courses"+"?token="+ meta.token;
-                }
-                return path
-            }
-        }
-    ]
 };
 
 

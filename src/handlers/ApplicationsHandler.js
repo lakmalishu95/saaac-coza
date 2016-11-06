@@ -4,6 +4,7 @@ var element = React.createElement;
 var Header = require('../components/sections/Header');
 var Footer = require('../components/sections/Footer');
 var AccStrip = require('../components/sections/AccStrip');
+var enrolmentFields = require("../static/data/enrolmentFields");
 
 var _ = require("lodash");
 
@@ -11,23 +12,10 @@ var meta = {
     path: "/applications",
     title: "Applications",
     heroImage: "/images/hero-home-back.jpg",
-    description: "This is applications page",
-    nerbArray: [
-        {
-            nerbName: 'application',
-            pathFunction: function (meta) {
-                var path;
-                if(meta && meta.token){
-                    path = process.env.ROOTURL + "/data-alt/applications/get" + "?token=" + meta.token;
-                }
-                else{
-                    path = process.env.ROOTURL + "/data/courses?token=undefined";
-                }
-                return path
-            }
-        }
-    ]
+    description: "This is applications page"
 };
+
+/*
 
 var formField = function({label, dataName, data}){
 
@@ -48,6 +36,8 @@ var formField = function({label, dataName, data}){
             )
     )
 };
+
+*/
 
 var handler = React.createClass({
 
@@ -72,104 +62,103 @@ var handler = React.createClass({
         }
         ///////////
 
-        var applicationForCurrentUser;
-        if (self.props.data && self.props.data.application && self.props.data.application[0] && self.props.data.application[0].enrolment){
+        var applicationForCurrentUser = element(
 
-            if(self.props.data.application[0].enrolment.referenceNumber === self.props.meta.claims.user){
-                var objectForFields = self.props.data.application[0];
-                if(self.props.meta && self.props.meta.query && self.props.meta.query.course){
-                    objectForFields.enrolment.course = self.props.meta.query.course
-                }
-                var dataRef = self.props.dataRef;
-                var enrolmentStatus;
-                if(self.props.data.application[0].enrolment && self.props.data.application[0].enrolment.status && self.props.data.application[0].enrolment.status === "completed"){
-                    enrolmentStatus = true
-                }
-                else{
-                    enrolmentStatus = false
-                }
+            "form",
 
-                applicationForCurrentUser = element(
-                    "form", {action: "/data-alt/applications/edit", method: "post"},
-                    neHandler.buildFormFields ("applications", objectForFields, dataRef, {noEdit: enrolmentStatus}),
-                    element(
-                        "input", {type: "submit" , value: "Save", className: "application-save-btn"}
+            {action: "/emails/custom/enrolments", method: "post"},
+
+            enrolmentFields.map(function(field, i) {
+
+                if (field.type === "Dropdown"){
+
+                    var dropdownOptions = [];
+                    if (field.dropdownOption1 !== ""){
+                        dropdownOptions.push(field.dropdownOption1);
+                    }
+                    if (field.dropdownOption2 !== ""){
+                        dropdownOptions.push(field.dropdownOption2);
+                    }
+                    if (field.dropdownOption3 !== ""){
+                        dropdownOptions.push(field.dropdownOption3);
+                    }
+                    if (field.dropdownOption4 !== ""){
+                        dropdownOptions.push(field.dropdownOption4);
+                    }
+                    if (field.dropdownOption5 !== ""){
+                        dropdownOptions.push(field.dropdownOption5);
+                    }
+                    if (field.dropdownOption6 !== ""){
+                        dropdownOptions.push(field.dropdownOption6);
+                    }
+                    if (field.dropdownOption7 !== ""){
+                        dropdownOptions.push(field.dropdownOption7);
+                    }
+                    if (field.dropdownOption8 !== ""){
+                        dropdownOptions.push(field.dropdownOption8);
+                    }
+                    if (field.dropdownOption9 !== ""){
+                        dropdownOptions.push(field.dropdownOption9);
+                    }
+                    if (field.dropdownOption10 !== ""){
+                        dropdownOptions.push(field.dropdownOption10);
+                    }
+
+                    return element (
+                        "div",
+                        {key: i, className: "application-container"},
+                        element(
+                            "label",{className: "application-label"},
+                            field.name
+                        ),
+                        element(
+                            "br",{}
+                        ),
+                        element(
+                            "select", {name: field.name},
+                            dropdownOptions.map(function(dropdownOption, i2) {
+                                return element(
+                                    "option", {value: dropdownOption, key: i2, className: "application-input-select"},
+                                    dropdownOption
+                                )
+                            })
+                        ),
+                        element(
+                            "br",{}
+                        )
                     )
-                );
-
-            }
-            else{
-
-                applicationForCurrentUser = element(
-                    "form", {action: "/custom-login", method: "get"},
-                    element(
-                        'label', {},
-                        "You need to login before you can apply online"
-                    ),
-                    element(
-                        'br', {}
-                    ),
-                    element(
-                        "button", {type: "submit" , className: "application-save-btn" },
-                        "Go to Login Page"
+                }
+                else {
+                    return element (
+                        "div",
+                        {key: i, className: "application-container"},
+                        element(
+                            "label",{className: "application-label"},
+                            field.name
+                        ),
+                        element(
+                            "br",{}
+                        ),
+                        element(
+                            "input",{type: "text", name: field.name, className: "input-text-fill application-input"}
+                        ),
+                        element(
+                            "br",{}
+                        )
                     )
-                );
+                }
 
-            }
+            }),
 
+            element(
+                "input", {type: "submit" , value: "Send", className: "application-save-btn"}
+            )
 
-        }
-
-        else if (self.props.meta && self.props.meta.claims && self.props.meta.claims.user) {
-
-            applicationForCurrentUser = element(
-                "form", {action: "/data-alt/applications/add", method: "post"},
-                element(
-                    'label', {},
-                    "Cell Phone Number" + " -> "
-                ),
-                element(
-                    'br', {}
-                ),
-                element(
-                    "input",
-                    {type: "text", name: "student.phone.cell", placeholder: "0831234234"}
-                ),
-                element(
-                    'br', {}
-                ),
-                element(
-                    "button", {type: "submit" , className: "application-save-btn" },
-                    "Start Application"
-                )
-            );
-
-        }
-
-        else {
-
-            applicationForCurrentUser = element(
-                "form", {action: "/custom-login", method: "get"},
-                element(
-                    'label', {},
-                    "You need to login before you can apply online"
-                ),
-                element(
-                    'br', {}
-                ),
-                element(
-                    "button", {type: "submit" , className: "application-save-btn" },
-                    "Go to Login Page"
-                )
-            );
-
-        }
+        );
 
 
-
-
-
-        /* var dd = self.props.data.nedb1.func();
+        /*
+        var dd = self.props.data.nedb1.func();
 
         var peopleList;
         if (self.props.data.message){
@@ -186,7 +175,7 @@ var handler = React.createClass({
                 )
             });
         }
-       */
+        */
 
         return (
             <body>

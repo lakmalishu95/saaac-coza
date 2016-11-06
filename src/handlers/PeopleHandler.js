@@ -8,19 +8,6 @@ var meta = {
     title: "People",
     description: "This is People page",
     css: ["/test.css"],
-    nerbArray: [
-        {
-            nerbName: 'people',
-            pathFunction: function (meta) {
-                if (meta.params._id){
-                    path = process.env.ROOTURL + "/data/people" + "/" + meta.params._id +"?token="+ meta.token;
-                }else {
-                    var path = process.env.ROOTURL + "/data/people"+"?token="+ meta.token;
-                }
-                return path
-            }
-        }
-    ]
 };
 
 

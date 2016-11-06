@@ -4,7 +4,7 @@ var React = require('react');
 var neRender = require('ne-render');
 var appmeta = require ('../node_engine/ne-gulp/appmeta');
 var routes = require ('../node_engine/ne-gulp/routes');
-var dataRef = require('../node_engine/ne-gulp/dataRef');
+// var dataRef = require('../node_engine/ne-gulp/dataRef');
 
 console.log("Client JS is Active");
 

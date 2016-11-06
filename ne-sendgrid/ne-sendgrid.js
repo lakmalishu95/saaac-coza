@@ -27,7 +27,6 @@ var neSendgrid = {
                 console.log(status);
                 status.date = new Date();
                 email.status = status;
-                self.saveEmail(email);
                 return email
             }
         });

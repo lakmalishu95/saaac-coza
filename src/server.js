@@ -7,5 +7,6 @@ optionsObject.cacheTime = 10000;
 optionsObject.pathToHandlers = "";
 optionsObject.pathToData = "";
 optionsObject.pathToRoutes = "../../app/routes/";
+//optionsObject.insecure = "true";
 //optionsObject.pathToRoutes = "../../../../app/routes/";
 neAuto.server(dirName, optionsObject);

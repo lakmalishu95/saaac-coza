@@ -3,26 +3,13 @@ var element = React.createElement;
 var Header = require('../components/sections/Header');
 var Footer = require('../components/sections/Footer');
 var AccStrip = require('../components/sections/AccStrip');
+var courses = require("../static/data/courses");
 
 var meta = {
-
     path: "/courses",
     title: "Courses",
     description: "SAAAC offers a wide variety of accredited courses",
     css: ["/ne-style/ne-css/neStyleFontAwesome.css"],
-    nerbArray: [
-        {
-            nerbName: 'courses',
-            pathFunction: function (meta) {
-                if (meta.params._id){
-                    path = process.env.ROOTURL + "/data/courses" + "/" + meta.params._id +"?token="+ meta.token;
-                }else {
-                    var path = process.env.ROOTURL + "/data/courses"+"?token="+ meta.token;
-                }
-                return path
-            }
-        }
-    ]
 };
 
 
@@ -36,7 +23,7 @@ var handler = React.createClass({
             coursesList = self.props.data.message;
         }
         else {
-            coursesList = self.props.data.courses.map((course, index)=>{
+            coursesList = courses.map((course, index)=>{
                 return element (
                     "div",{className: "courses-list-item", key: index},
                     element(
