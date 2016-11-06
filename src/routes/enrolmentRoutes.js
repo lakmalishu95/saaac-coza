@@ -14,6 +14,19 @@ var customEmailRoutes = function (server){
         console.log(" ");
         console.log(" ");
 
+        var generateStudentNumber = function randomString(length, chars) {
+            var mask = '';
+            if (chars.indexOf('a') > -1) mask += 'abcdefghijklmnopqrstuvwxyz';
+            if (chars.indexOf('A') > -1) mask += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            if (chars.indexOf('#') > -1) mask += '0123456789';
+            if (chars.indexOf('!') > -1) mask += '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\';
+            var result = '';
+            for (var i = length; i > 0; --i) result += mask[Math.floor(Math.random() * mask.length)];
+            return result;
+        };
+
+        var studentNumber = generateStudentNumber(8,'#A');
+
         var emailObject = {};
 
         emailObject.to = process.env.EMAIL;
@@ -22,6 +35,7 @@ var customEmailRoutes = function (server){
 
         // FORMAT EMAIL BODY - START
         emailObject.body = emailObject.body + "<h1> Application to study </h1>" + req.body["Course"] + "<br>" + req.body["College"];
+        emailObject.body = emailObject.body + "<h2> Student Reference </h2>"  + "<br>" + studentNumber;
 
         emailObject.body = emailObject.body + "<h2> Student Basic Information </h2>";
         emailObject.body = emailObject.body + "<table style='border: 1px solid black'>";
