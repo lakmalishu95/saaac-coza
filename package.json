@@ -19,7 +19,7 @@
     "ne-gulp": "^1.7.4",
     "ne-handler": "^1.1.6",
     "ne-render": "^1.9.0",
-    "ne-sendgrid": "^1.1.4",
+    "ne-sendgrid": "^1.1.5",
     "ne-server": "^1.8.4",
     "ne-style": "^1.0.7",
     "react": "^0.13.3",
