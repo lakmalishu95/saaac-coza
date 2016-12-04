@@ -58,7 +58,7 @@ gulp.task('webpack',['ne'], function(){
 
 gulp.task('nodemon', function () {
     env({
-        file: './config-d.json',
+        file: './configD.json',
         vars: {
             // any variables you want to overwrite
         }

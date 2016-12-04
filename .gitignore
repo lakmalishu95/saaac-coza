@@ -1,6 +1,8 @@
 node_modules
 !/node_modules/ne-admin
 .idea
+configP.json
+configD.json
 config-p.json
 config-d.json
 node_engine
