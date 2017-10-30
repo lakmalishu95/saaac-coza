@@ -13,11 +13,42 @@ var meta = {
 
 var colleges = [
 
-    { "title" : "SAAAC Durban","phone" : "Tel: 031 822 2936", "email" : "Email: principaldbn@saaac.co.za", "address" : "SAAAC Durban: Suites 303/304 Tower B, Salisbury Centre, Dr Pixley KaSeme Street (West), Durban " },
-    { "title" : "SAAAC East London","phone" : "Tel: 043 748 2225", "email" : "Email academyels@saaac.co.za", "address" : "9 Kelvin Place, Beacon Bay, East London" },
-    { "title" : "SAAAC Queenstown", "phone" : "Tel: 045 838 6082", "email" : "Email: academyqtn@saaac.co.za", "address" : "SAAAC Queenstown: Robinson Road, Opposite Department of Labour, Queenstown" },
-    { "title" : "SAAAC Pretoria", "phone" : "Tel: 012 320 8973", "email" : "Email academypta@saaac.co.za", "address" : "SAAAC Pretoria: Kutlwanong Democracy Centre, 357 Visagie Street, Pretoria, 0002" },
-    { "title" : "SAAAC Sterkstroom", "phone" : "Cell: 082 566 5375", "email" : "Email: academyqtn@saaac.co.za", "address" : "Main Street, Opposite Library, Sterkstroom" }
+    {
+      "title" : "SAAAC Pretoria - Prestige College Campus",
+      "phone" : "Tel: 012 320 8973",
+      "email" : "Email: principalpcc@saaac.co.za",
+      "address" : "1 Eike Road, Off Old Warmbaths Road, Hammanskraal"
+    },
+    {
+      "title" : "SAAAC Durban",
+      "phone" : "Tel: 031 822 2936",
+      "email" : "Email: principaldbn@saaac.co.za",
+      "address" : "SAAAC Durban: Suites 303/304 Tower B, Salisbury Centre, Dr Pixley KaSeme Street (West), Durban "
+    },
+    {
+      "title" : "SAAAC East London",
+      "phone" : "Tel: 043 748 2225",
+      "email" : "Email academyels@saaac.co.za",
+      "address" : "9 Kelvin Place, Beacon Bay, East London"
+    },
+    {
+      "title" : "SAAAC Queenstown",
+      "phone" : "Tel: 045 838 6082",
+      "email" : "Email: academyqtn@saaac.co.za",
+      "address" : "SAAAC Queenstown: Robinson Road, Opposite Department of Labour, Queenstown"
+    },
+    {
+      "title" : "SAAAC Pretoria",
+      "phone" : "Tel: 012 320 8973",
+      "email" : "Email academypta@saaac.co.za",
+      "address" : "SAAAC Pretoria: Kutlwanong Democracy Centre, 357 Visagie Street, Pretoria, 0002"
+    },
+    {
+      "title" : "SAAAC Sterkstroom",
+      "phone" : "Cell: 082 566 5375",
+      "email" : "Email: academyqtn@saaac.co.za",
+      "address" : "Main Street, Opposite Library, Sterkstroom"
+    }
 
 ];
 
