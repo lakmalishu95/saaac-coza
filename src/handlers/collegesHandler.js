@@ -15,9 +15,15 @@ var colleges = [
 
     {
       "title" : "SAAAC Pretoria - Prestige College Campus",
-      "phone" : "Tel: 012 320 8973",
-      "email" : "Email: principalpcc@saaac.co.za",
+      "phone" : "Tel: 012 711 8600 & 012 711 8604",
+      "email" : "Email: prestigecollege@saaac.co.za",
       "address" : "1 Eike Road, Off Old Warmbaths Road, Hammanskraal"
+    },
+    {
+      "title" : "SAAAC East Rand - Brakpan",
+      "phone" : "Tel: 087 701 0828",
+      "email" : "Email: eastrand@saaac.co.za",
+      "address" : "55 van der Walt Street, Dalview, Brakpan"
     },
     {
       "title" : "SAAAC Durban",
