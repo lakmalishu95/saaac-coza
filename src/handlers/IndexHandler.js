@@ -5,6 +5,9 @@ var Footer = require('../components/sections/Footer');
 var Accreditations = require('../components/sections/Accreditations');
 var AccStrip = require('../components/sections/AccStrip');
 var ProfCourseLink = require('../components/sections/ProfCourseLink');
+var Dhet = require('../components/sections/dhet');
+
+
 
 var meta = {
     path: "/",
@@ -59,6 +62,7 @@ var handler = React.createClass({
                         </div>
                     </div>
                 </section>
+                <Dhet {...self.props} />
                 <ProfCourseLink {...self.props} />
                 <Accreditations {...self.props} />
                 <Footer {...self.props} />
