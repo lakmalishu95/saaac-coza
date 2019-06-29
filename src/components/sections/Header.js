@@ -25,6 +25,7 @@ class Header extends React.Component {
                 self.props.meta.title
             )
         }
+        
 
         var userStatus;
         if(self.props.meta && self.props.meta.claims && self.props.meta.claims.user ){

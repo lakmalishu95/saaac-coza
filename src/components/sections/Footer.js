@@ -51,13 +51,6 @@ class Footer extends React.Component {
                                     "li",{className: "footer-list"},
                                     element(
                                         "a",{href:"/#"},
-                                        "Pretoria City Campus"
-                                    )
-                                ),
-                                element(
-                                    "li",{className: "footer-list"},
-                                    element(
-                                        "a",{href:"/#"},
                                         "Pretoria Prestige College Campus"
                                     )
                                 ),
@@ -178,7 +171,7 @@ class Footer extends React.Component {
                         "div", {className: "footer-copyright"},
                         element(
                             "small",{},
-                            "Copyright © 2015"
+                            "Copyright © 2019"
                         )
                     )
                 )
