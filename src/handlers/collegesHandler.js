@@ -14,8 +14,8 @@ var meta = {
 var colleges = [
 
     {
-      "title" : "SAAAC Pretoria - Prestige College Campus",
-      "phone" : "Tel: 012 711 8600 & 012 711 8604",
+      "title" : "SAAAC Prestige College Campus - Hammanskraal",
+      "phone" : "Tel: 012 516 0000",
       "email" : "Email: prestigecollege@saaac.co.za",
       "address" : "1 Eike Road, Off Old Warmbaths Road, Hammanskraal"
     },
