@@ -326,13 +326,13 @@ var data =
         {
             "name": "College",
             "type": "Dropdown",
-            "dropdownOption1": "Pretoria Campus",
+            "dropdownOption1": "Prestige College Campus",
             "dropdownOption2": "Queenstown Campus",
             "dropdownOption3": "Durban Campus",
             "dropdownOption4": "East London Campus",
             "dropdownOption5": "Sterkstroom Campus",
-            "dropdownOption6": "Prestige College Campus",
-            "dropdownOption7": "East Rand Campus",
+            "dropdownOption6": "East Rand Campus",
+            "dropdownOption7": "",
             "dropdownOption8": "",
             "dropdownOption9": "",
             "dropdownOption10": ""

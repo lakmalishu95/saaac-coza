@@ -21,7 +21,7 @@ var colleges = [
     },
     {
       "title" : "SAAAC East Rand - Brakpan",
-      "phone" : "Tel: 087 701 0828",
+      "phone" : "Tel: 078 480 3311",
       "email" : "Email: eastrand@saaac.co.za",
       "address" : "55 van der Walt Street, Dalview, Brakpan"
     },
@@ -33,7 +33,7 @@ var colleges = [
     },
     {
       "title" : "SAAAC East London",
-      "phone" : "Tel: 078 480 3311",
+      "phone" : "Tel: 043 748 2225",
       "email" : "Email academyels@saaac.co.za",
       "address" : "9 Kelvin Place, Beacon Bay, East London"
     },
